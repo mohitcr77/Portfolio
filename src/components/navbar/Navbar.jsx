@@ -14,7 +14,7 @@ export default function Navbar() {
           Mohit Singh
         </motion.span> */}
         <div className="social">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/mohit-singh-3362231b6/">
             <img src="/linkedin.png" alt="" />
           </a>
           <a href="#">

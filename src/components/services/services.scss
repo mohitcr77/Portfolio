@@ -1,29 +1,30 @@
-@import '../../app.scss';
-
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
-  height: 100%;
+  min-height: 100vh; // Changed from height: 100%
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 20px;
+  overflow-y: auto; // Add scroll if content overflows
+  padding-bottom: 50px; // Add bottom padding for last row visibility
 
-  @media (max-width: 738px) {  // Using direct media query instead of mixin
-    height: 100%;
+  @media (max-width: 738px) {
     padding: 10px;
+    height: auto;
+    padding-bottom: 30px;
   }
 
   .textContainer {
-    flex: 0.5;
+    flex: 0.2; // Reduced from 0.5
     align-self: flex-end;
     display: flex;
     align-items: center;
     gap: 20px;
 
-    @media (max-width: 738px) {  // Using direct media query
+    @media (max-width: 738px) {
       align-self: center;
       text-align: center;
       gap: 10px;
+      margin-bottom: 10px;
     }
 
     p {
@@ -49,13 +50,15 @@
   }
 
   .titleContainer {
-    flex: 0.8;
+    flex: 0.3; // Reduced from 0.8
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px; // Added margin bottom
 
     @media (max-width: 738px) {
       width: 100%;
+      margin-bottom: 15px;
     }
 
     .title {
@@ -66,66 +69,42 @@
       @media (max-width: 738px) {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
       }
 
       img {
-        width: 100px;
-        height: 100px;
+        width: 80px; // Reduced from 100px
+        height: 80px; // Reduced from 100px
         border-radius: 20px;
         object-fit: cover;
 
         @media (max-width: 738px) {
-          width: 80px;
-          height: 80px;
+          width: 60px;
+          height: 60px;
         }
       }
 
       h1 {
-        font-size: 72px;
+        font-size: 62px; // Reduced from 72px
         font-weight: 100;
 
         @media (max-width: 738px) {
-          font-size: 36px;
-        }
-
-        b {
-          font-weight: 500;
-        }
-      }
-
-      button {
-        width: 180px;
-        height: 60px;
-        border-radius: 50px;
-        background-color: orange;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: darken(orange, 10%);
-        }
-
-        @media (max-width: 738px) {
-          width: 130px;
-          height: 40px;
-          font-size: 16px;
+          font-size: 28px;
         }
       }
     }
   }
 
   .skillsGridContainer {
-    flex: 2;
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 15px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
     width: 100%;
+    align-content: start; // Align grid items to start
 
     @media (max-width: 738px) {
       grid-template-columns: repeat(2, 1fr);
@@ -137,17 +116,17 @@
       background-color: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 8px;
-      padding: 5px;
+      padding: 15px 10px; // Adjusted padding
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
-      min-height: 100px;
+      aspect-ratio: 1; // Makes boxes square
+      min-height: auto; // Remove fixed height
 
       @media (max-width: 738px) {
-        padding: 1px;
-        min-height: 50px;
+        padding: 10px 5px;
       }
 
       &:hover {
@@ -155,14 +134,26 @@
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
       }
 
+      svg {
+        width: 40px; // Reduced from 50px
+        height: 40px;
+        margin-bottom: 8px;
+
+        @media (max-width: 738px) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
       h3 {
         font-size: 14px;
         font-weight: 500;
-        margin: 8px 0 4px;
         text-align: center;
+        margin: 5px 0;
 
         @media (max-width: 738px) {
           font-size: 12px;
+          margin: 3px 0;
         }
       }
 
@@ -172,7 +163,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         opacity: 0.7;
-        margin-top: auto;
+        margin-top: 5px;
 
         @media (max-width: 738px) {
           font-size: 9px;
