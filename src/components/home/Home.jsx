@@ -56,7 +56,7 @@ function Home() {
           <motion.h1 variants={textVariants}>
             Software Developer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
+          {/* <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
@@ -67,7 +67,7 @@ function Home() {
             >
               Contact me
             </motion.a>
-          </motion.div>
+          </motion.div> */}
           <motion.img
             variants={textVariants}
             animate="scrollButton"
