@@ -30,8 +30,7 @@ function Links() {
         "Homepage",
         "Services",
         "Portfolio",
-        "Contact",
-        "About"
+        "Contact"
     ]
   return (
     <motion.div className='links' variants={variants}>

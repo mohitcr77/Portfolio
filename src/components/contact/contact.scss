@@ -86,30 +86,38 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-
+    
       @media (max-width: 738px) {
         gap: 15px;
       }
-
+    
       input, textarea {
         padding: 12px;
         background-color: transparent;
-        border: 1px solid white;
+        border: 1px solid white; /* Ensure border is defined */
         color: white;
         border-radius: 7px;
-
+    
+        /* Remove default outline and ensure consistent border on focus */
+        &:focus {
+          outline: none; /* Remove browser default outline */
+          border: 1px solid white; /* Maintain same border as default state */
+          /* Optional: Add a subtle focus effect */
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle glow for focus */
+        }
+    
         @media (max-width: 738px) {
           padding: 8px;
           margin-bottom: 10px;
         }
       }
-
+    
       textarea {
         @media (max-width: 738px) {
           height: 100px;
         }
       }
-
+    
       button {
         padding: 15px;
         border: none;
@@ -118,14 +126,14 @@
         font-weight: bold;
         border-radius: 7px;
         position: relative;
-
+    
         @media (max-width: 738px) {
           padding: 12px;
           width: 100%;
           margin-top: 10px;
           margin-bottom: 20px;
         }
-
+    
         &:active {
           transform: scale(0.98);
         }

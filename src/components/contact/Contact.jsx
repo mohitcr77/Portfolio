@@ -102,8 +102,8 @@ function Contact() {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          {error && "Something went wrong"}
+          {success && "Email sent successfully"}
         </motion.form>
       </div>
     </motion.div>
