@@ -51,7 +51,7 @@ function Home() {
         >
           <motion.h2 variants={textVariants}>MOHIT SINGH</motion.h2>
           <motion.p variants={textVariants} className="subtitle">
-            Graduate Student at Stevens Institute of Technology, Hoboken
+            Graduate Student at Stevens Institute of Technology
           </motion.p>
           <motion.h1 variants={textVariants}>
             Software Developer
