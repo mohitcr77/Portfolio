@@ -54,7 +54,7 @@ function Home() {
             Graduate Student at Stevens Institute of Technology, Hoboken
           </motion.p>
           <motion.h1 variants={textVariants}>
-            Software and <br /> Full Stack Developer
+            Software Developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
